@@ -3,6 +3,7 @@
 #include <eos.h>
 #include "fujinet-network.h"
 #include "fujinet-network-adam.h"
+#include <stdio.h>
 
 /**
  * @brief Open network connection
