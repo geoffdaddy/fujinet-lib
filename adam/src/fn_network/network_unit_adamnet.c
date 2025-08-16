@@ -9,16 +9,15 @@
  */
 
 #include "fujinet-network-adam.h"
+#include <stdio.h>
 
 uint8_t network_unit_adamnet(char *devicespec)
 {
     uint8_t u=0;
-    
+
     if (!(u = network_unit(devicespec)))
         return 0;
-    else
-    {
-        u += (NETWORK_DEVICE_ID_START - 1);
-        return u;
-    }
+
+    u += (NETWORK_DEVICE_ID_START - 1);
+    return u;
 }
