@@ -1,15 +1,17 @@
 /**
- * @brief   Return proper unit # for adamnet.
+ * @brief   Set channel mode.
  * @author  Geoff Oltmans
  * @email   oltmansg at gmail dot com
  * @license gpl v. 3, see LICENSE for details.
  * @verbose ---
  * @param devicespec The Device Specification "N:..."
+ * @param mode mode
  * @return AdamNet unit number.
  */
 
 #include <stdint.h>
 #include "fujinet-network.h"
+#include <eos.h>
 
 uint8_t network_http_set_channel_mode(const char *devicespec, uint8_t mode)
 {

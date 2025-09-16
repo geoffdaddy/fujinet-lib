@@ -1,21 +1,21 @@
 /**
- * @brief   Return proper unit # for adamnet.
+ * @brief   read from adamnet.
  * @author  Geoff Oltmans
  * @email   oltmansg at gmail dot com
  * @license gpl v. 3, see LICENSE for details.
  * @verbose ---
  * @param devicespec The Device Specification "N:..."
- * @return AdamNet unit number.
+ * @param buf buffer to read into
+ * @param len length of buffer
+ * @return fujinet error code.
  */
 
 #include <stdint.h>
 #include "response.h"
 #include <eos.h>
 #include "fujinet-network.h"
-// #include <stdlib.h>
 #include <string.h>
 #include "fujinet-network-adam.h"
-#include "response.h"
 
 int16_t network_read_adam(char* devicespec, uint8_t *buf, uint16_t len)
 {
@@ -30,7 +30,7 @@ int16_t network_read_adam(char* devicespec, uint8_t *buf, uint16_t len)
 
   while (1)
   {
-    err = eos_read_character_device(u, response, 1024);
+    err = eos_read_character_device(u, response, RESPONSE_SIZE);
 
     if (err == ADAMNET_TIMEOUT)
       continue;

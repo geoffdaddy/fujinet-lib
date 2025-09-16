@@ -1,10 +1,12 @@
 /**
- * @brief   Return proper unit # for adamnet.
+ * @brief   Open a network connection.
  * @author  Geoff Oltmans
  * @email   oltmansg at gmail dot com
  * @license gpl v. 3, see LICENSE for details.
  * @verbose ---
  * @param devicespec The Device Specification "N:..."
+ * @param devicespec The Device Specification "N:..."
+ * @param trans translation mode
  * @return AdamNet unit number.
  */
 
@@ -15,9 +17,9 @@
 
 /**
  * @brief Open network connection
- * @param devicespec Device spec to use "N:..."
+ * @param devicespec Device spec to use "N:..." with URL
  * @param mode connection mode
- * @param trans Translation mode 0 = none ...
+ * @param trans Translation mode
  * @return FN_error code.
  */
 uint8_t network_open(const char* devicespec, uint8_t mode, uint8_t trans)

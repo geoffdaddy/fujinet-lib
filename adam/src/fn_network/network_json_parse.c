@@ -1,5 +1,5 @@
 /**
- * @brief   Return proper unit # for adamnet.
+ * @brief   Parse JSON after a network open.
  * @author  Geoff Oltmans
  * @email   oltmansg at gmail dot com
  * @license gpl v. 3, see LICENSE for details.
@@ -10,6 +10,7 @@
 
 #include <stdint.h>
 #include "fujinet-network.h"
+#include <eos.h>
 
 uint8_t network_json_parse(const char *devicespec)
 {
