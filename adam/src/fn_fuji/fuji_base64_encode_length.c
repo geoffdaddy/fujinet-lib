@@ -28,7 +28,7 @@ bool fuji_base64_encode_length(unsigned long *len)
 
   while(1)
     {
-      err = eos_read_character_device(FUJINET_DEVICE_ID,response,1024);
+      err = eos_read_character_device(FUJINET_DEVICE_ID,response,RESPONSE_SIZE);
 
       if (err == ADAMNET_TIMEOUT)
         continue;
