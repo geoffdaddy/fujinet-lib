@@ -1,3 +1,11 @@
+/**
+ * @brief   network close
+ * @author  Geoff Oltmans
+ * @email   oltmansg at gmail dot com
+ * @license gpl v. 3, see LICENSE for details.
+ * @verbose AdamNet DCBs for Network devices
+ */
+
 #include <stdint.h>
 #include <eos.h>
 #include "fujinet-network.h"
